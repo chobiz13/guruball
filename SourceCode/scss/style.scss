@@ -1,0 +1,386 @@
+@import "compass";
+@import "tab.scss";
+
+$main-color : #246114;
+$bg-color: #ffffff;
+
+body
+{
+  background-color: $bg-color;
+}
+a
+{
+  &:hover,&:focus
+  {
+    text-decoration: none;
+  }
+}
+/* ----- mixin ----------*/
+@mixin square-size($size)
+{
+  width: $size;
+  height: $size;
+}
+/*----- padding & margin set ----*/
+.padding
+{
+  padding: 0;
+}
+.padding-5
+{
+  padding: 5px;
+}
+.padding-10
+{
+  padding: 10px;
+}
+.padding-15
+{
+  padding: 15px;
+}
+.margin
+{
+  margin: 0;
+}
+.margin-5
+{
+  margin: 5px;
+}
+.margin-10
+{
+  margin: 10px;
+}
+.margin-15
+{
+  margin: 15px;
+}
+.margin-top-5
+{
+  margin-top: 5px;
+}
+.margin-top-10
+{
+  margin-top: 10px;
+}
+.margin-top-15
+{
+  margin-top: 15px;
+}
+
+.section
+{
+  background-color: #FFFFFF;
+  @include border-radius(4px);
+  @include box-shadow(rgba(0,0,0,.1) 0 1px 2px);
+}
+
+
+/* ------ Header -----*/
+.top-tab
+{
+  background-color: #333333;
+  padding: 5px 0 5px 5px;
+  color: #f1f1f1;
+  a{
+    color: #f1f1f1;
+    font-size: 12px;
+  }
+}
+.main-tab
+{
+  min-height: 60px;
+  @include border-radius(0px);
+  background-color: #f5f5f5;
+  border-color: transparent;
+  @include box-shadow(rgba(0,0,0,.1) 0 2px 6px);
+  .navbar-nav
+  {
+    &>li
+    {
+      &>a
+      {
+        font-size: 16px;
+        padding-top: 19px;
+        padding-bottom: 19px;
+      }
+    }
+  }
+}
+/* ------ !!!!! Header -----*/
+
+.topic-title
+{
+  padding: 15px 0 15px 15px;
+  background-color: #5c5c5c;
+  border-bottom: 3px solid $main-color;
+  h2
+  {
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+}
+.banner-top
+{
+  position: relative;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  margin-top: 50px;
+  margin-top: 20px;
+  height: 90px;
+  overflow: hidden;
+  background-color: #00CC00;
+  float: right;
+  img
+  {
+
+  }
+}
+
+/*------ chat box -----*/
+.warpper-chat
+{
+  @include box-shadow(rgba(0,0,0,.1) 0 1px 2px);
+}
+.chat-box
+{
+  min-height: 400px;
+  padding: 10px;
+  &>.chat-message
+  {
+    margin-bottom: 5px;
+    &.admin
+    {
+      color: $main-color !important;
+      text-decoration: underline;
+    }
+    .chat-user
+    {
+      color: #afafaf;
+      display: inline-block;
+      margin-right: 5px;
+    }
+    &>img
+    {
+      @include square-size(30px);
+    }
+  }
+}
+.warpper-input-message
+{
+  background: hsla(0, 0%, 93.3%, .4);
+  &>.text-word
+  {
+    padding-left: 50px;
+    padding-bottom: 10px;
+    color: #8a8a8a;
+  }
+}
+.input-message
+{
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 60px;
+  border-collapse: separate;
+  border-top: 0.5px solid #c9c9c9;
+
+  padding-top: 10px;
+  &>input
+  {
+    position: relative;
+    display: table-cell;
+    outline: 0;
+    width: 100%;
+    min-height: 40px;
+    padding-left: 10px;
+    z-index: 2;
+    box-sizing: border-box;
+    border-color: transparent;
+    border-bottom: 1px solid #c9c9c9;
+    margin-left: 5px;
+    background-color: transparent;
+  }
+  &>span
+  {
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: table-cell;
+    width: 1%;
+    &>img
+    {
+      @include square-size(30px);
+      margin-left: 5px;
+    }
+    &>button
+    {
+      border-color: transparent;
+      @include border-radius(0);
+      min-height: 40px;
+      background-color: transparent;
+      font-size: 18px;
+      color: #8a8a8a;
+      &>:hover,&>:focus,&>:active
+      {
+        border:transparent;
+        outline: 0;
+      }
+    }
+  }
+}
+
+.nav-title
+{
+  position: relative;
+  padding: 10px 0 10px 0;
+  display: table;
+  background-color: #f6f6fa;
+  padding-left: 10px;
+  font-size: 20px;
+  h2
+  {
+    margin: 0;
+    display: table-cell;
+    width: 100%;
+    font-size: 18px;
+    color: $main-color;
+    &>.title-text
+    {
+      border-bottom: 3px solid #62cb31;
+      display: inline-block;
+      height: 32px;
+      margin-bottom: -10px;
+    }
+  }
+  span
+  {
+    display: table-cell;
+    &>input
+    {
+      outline: 0;
+      border-color: transparent;
+      min-height: 42px;
+      padding-right: 10px;
+      text-align: right;
+      margin-bottom: -14px;
+      margin-top: -10px;
+      border-top-left-radius: 5px;
+    }
+  }
+}
+.nav-block
+{
+  display: block;
+}
+.nav-footer
+{
+  padding: 10px 0 10px 0;
+  background: #f7f9fa;
+  border-top: 0 solid transparent;
+  padding-left: 15px;
+  position: relative;
+}
+.pager
+{
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+  float: right;
+  padding-right: 20px;
+  &>li
+  {
+    &>a
+    {
+      padding: 0 5px;
+      color: #000000;
+    }
+  }
+}
+/* ----- Table ------*/
+.table-custom
+{
+  width: 100%;
+  th
+  {
+    padding: 15px 0 15px 0;
+    color: #000000;
+  }
+  td
+  {
+    padding: 4px 0 4px 0;
+    border-bottom: 1px solid #efefef;
+    &.row-leagues
+    {
+      padding-left: 20px;
+      background-color: #989898;
+      color: #FFFFFF;
+      &>img
+      {
+        @include square-size(30px);
+        margin-right: 15px;
+      }
+    }
+  }
+  .match-date
+  {
+    color: #8a8a8a;
+    font-size: 12px;
+    &.text-success
+    {
+      color: green;
+    }
+  }
+}
+
+.table-score
+{
+  a
+  {
+    color: #2f2f2f;
+  }
+}
+.table-rank
+{
+  td
+  {
+    padding: 10px 0 10px 0;
+    img
+    {
+      @include square-size(20px);
+    }
+  }
+}
+.hilight
+{
+  p
+  {
+    padding: 5px;
+  }
+}
+
+.badge-none
+{
+  background-color: transparent;
+  color: #616161;
+  border: 0.5px solid $main-color;
+  font-size: 12px;
+}
+.label
+{
+  font-weight: 300 !important;
+  &.label-success
+  {
+    background-color: #87d887;
+  }
+}
+.bet-win
+{
+  font-weight: 700;
+  color: #ff6d6d;
+  text-decoration: underline;
+}
+
+/*----- TAB -----*/
+/* Tabs panel */
+

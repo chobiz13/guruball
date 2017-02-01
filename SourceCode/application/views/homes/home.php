@@ -1,110 +1,1456 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="section">
+				<div class="nav-title">
+					<h2>
+						<div class="title-text">
+							<i class="fa fa-line-chart" aria-hidden="true"></i>
+							วิเคราะห์บอล สเต็ปบอล Tipster วันนี้
+						</div>
+					</h2>
 
-	<style type="text/css">
+					<span>
+						<input type="text" placeholder="ค้นหา..." class="pull-right">
+					</span>
+				</div>
+				<table class="table-custom table-hover">
+					<thead>
+						<tr>
+							<th class="text-center">เวลา</th>
+							<th class="text-center">คู่ที่วิเคราะห์</th>
+							<th class="text-center">ทำนาย</th>
+							<th class="text-center">Odds</th>
+							<th class="text-center">ชื่อผู้ทายผล</th>
+							<th class="text-center"></th>
+						</tr>
+					</thead>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล - วัตฟอร์ด
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล
+							<br/>
+							-1
+						</td>
+						<td class="text-center">
+							1.89
+							<div class="match-date">
+								W88
+							</div>
+						</td>
+						<td class="text-center">
+							Tony
+							<div class="match-date text-success">
+								LV.1
+							</div>
+						</td>
+						<td class="text-center">
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
+						</td>
+						<td class="text-center">
 
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล - วัตฟอร์ด
+						</td>
+						<td class="text-center">
+							ต่ำ 3
+						</td>
+						<td class="text-center">
+							2.9
+							<div class="match-date">
+								188BET
+							</div>
+						</td>
+						<td class="text-center">
+							Tony
+							<div class="match-date text-success">
+								LV.1
+							</div>
+						</td>
+						<td class="text-center">
 
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
+						</td>
+						<td class="text-center">
 
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล - วัตฟอร์ด
+						</td>
+						<td class="text-center">
+							สูง 3
+						</td>
+						<td class="text-center">
+							2.9
+							<div class="match-date">
+								W88
+							</div>
+						</td>
+						<td class="text-center">
+							Tony
+							<div class="match-date text-success">
+								LV.1
+							</div>
+						</td>
+						<td class="text-center">
 
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล - วัตฟอร์ด
+						</td>
+						<td class="text-center">
+							สูง 3
+						</td>
+						<td class="text-center">
+							2.9
+							<div class="match-date">
+								SBOBET
+							</div>
+						</td>
+						<td class="text-center">
+							Tony
+							<div class="match-date text-success">
+								LV.1
+							</div>
+						</td>
+						<td class="text-center">
 
-	#body {
-		margin: 0 15px 0 15px;
-	}
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล - วัตฟอร์ด
+						</td>
+						<td class="text-center">
+							สูง 3
+						</td>
+						<td class="text-center">
+							2.9
+							<div class="match-date">
+								SBOBET
+							</div>
+						</td>
+						<td class="text-center">
+							Tony
+							<div class="match-date text-success">
+								LV.1
+							</div>
+						</td>
+						<td class="text-center">
 
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล - วัตฟอร์ด
+						</td>
+						<td class="text-center">
+							สูง 3
+						</td>
+						<td class="text-center">
+							2.9
+							<div class="match-date">
+								SBOBET
+							</div>
+						</td>
+						<td class="text-center">
+							Tony
+							<div class="match-date text-success">
+								LV.1
+							</div>
+						</td>
+						<td class="text-center">
 
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
-</head>
-<body>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล - วัตฟอร์ด
+						</td>
+						<td class="text-center">
+							สูง 3
+						</td>
+						<td class="text-center">
+							2.9
+							<div class="match-date">
+								SBOBET
+							</div>
+						</td>
+						<td class="text-center">
+							Tony
+							<div class="match-date text-success">
+								LV.1
+							</div>
+						</td>
+						<td class="text-center">
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล - วัตฟอร์ด
+						</td>
+						<td class="text-center">
+							สูง 3
+						</td>
+						<td class="text-center">
+							2.9
+							<div class="match-date">
+								SBOBET
+							</div>
+						</td>
+						<td class="text-center">
+							Tony
+							<div class="match-date text-success">
+								LV.1
+							</div>
+						</td>
+						<td class="text-center">
 
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-		<p>
-			การเรียกใช้งานผ่าน HMVC
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล - วัตฟอร์ด
+						</td>
+						<td class="text-center">
+							สูง 3
+						</td>
+						<td class="text-center">
+							2.9
+							<div class="match-date">
+								SBOBET
+							</div>
+						</td>
+						<td class="text-center">
+							Tony
+							<div class="match-date text-success">
+								LV.1
+							</div>
+						</td>
+						<td class="text-center">
 
-			จะมีดังนี้
-		</p>
-		<code>
-			Controller Home.php
-			<br>
-			public function index()
-			<br>
-			{
-			<br>
-			$data["css"]    =   $this->load->view("homes/css" , "" , true);
-			<br>
-			$data["js"]     =   $this->load->view("homes/js" , "" , true);
-			<br>
-			$this->RenderView('homes/home' , $data);
-			<br>
-			}
-		</code>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="text-center">
+							อาร์เซน่อล - วัตฟอร์ด
+						</td>
+						<td class="text-center">
+							สูง 3
+						</td>
+						<td class="text-center">
+							2.9
+							<div class="match-date">
+								SBOBET
+							</div>
+						</td>
+						<td class="text-center">
+							Tony
+							<div class="match-date text-success">
+								LV.1
+							</div>
+						</td>
+						<td class="text-center">
+
+						</td>
+					</tr>
+				</table>
+				<div class="nav-footer">
+
+					ข้อมูลวันนี้ทั้งหมด 10 ข้อมูล
+
+					<ul class="pager">
+						<li>
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">«</span>
+							</a>
+						</li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li>...</li>
+						<li><a href="#">10</a></li>
+						<li>
+							<a href="#" aria-label="Next">
+								<span aria-hidden="true">»</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="section text-center margin-top-15">
+				<img src="<?php echo base_url()?>images/banners/banner728.png" alt="<?php echo $setting["alt"];?>">
+			</div>
+			<div class="section margin-top-15">
+				<div class="nav-title nav-block">
+					<h2>
+						<div class="title-text">
+							<i class="fa fa-commenting-o" aria-hidden="true"></i>
+							เว็บบอร์ด วิเคราะห์บอล สเต็ปบอล ทีเด็ดฟุตบอลวันนี้
+						</div>
+
+					</h2>
+				</div>
+				<table class="table-custom table-hover">
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="b-subject">
+							<span class="label label-success">วิเคราะห์บอล</span> พรีเมียร์ลีก : สโต๊ค ซิตี้ -vs- เอฟเวอร์ตัน
+						</td>
+						<td class="text-center">
+							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+						</td>
+						<td class="text-center">
+							นายมั่นคง
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/hot2.gif" alt="">
+						</td>
+						<td class="text-center">
+
+						</td>
+						<td class="text-center">
+
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="b-subject">
+							<span class="label label-warning">ทีเด็ด</span> โอเวอร์...เจอ จับ แจก!!
+						</td>
+						<td class="text-center">
+							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 347 </span>
+						</td>
+						<td class="text-center">
+							นายมั่นคง
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/hot2.gif" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="b-subject">
+							<span class="label label-danger">สเต็ป</span> ฟุตบอล วันนี้
+						</td>
+						<td class="text-center">
+							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 504 </span>
+						</td>
+						<td class="text-center">
+							นายมั่นคง
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/hot2.gif" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="b-subject">
+							<span class="label label-danger">สเต็ป</span> <span class="label label-warning">ทีเด็ด</span> ลูกหนัง โดยเหล่าเซียนบอล
+						</td>
+						<td class="text-center">
+							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 3,001 </span>
+						</td>
+						<td class="text-center">
+							นายมั่นคง
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/hot2.gif" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="b-subject">
+							หุ้นราคา 5 ลีกดังตลอดสัปดาห์
+						</td>
+						<td class="text-center">
+							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+						</td>
+						<td class="text-center">
+							นายมั่นคง
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/hot2.gif" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="b-subject">
+							<span class="label label-success">วิเคราะห์บอล</span> แชมเปี้ยนชิพ : เบอร์ตัน -vs- ฟูแล่ม
+						</td>
+						<td class="text-center">
+							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+						</td>
+						<td class="text-center">
+							นายมั่นคง
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/hot2.gif" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="b-subject">
+							<span class="label label-success">วิเคราะห์บอล</span> สกอตติช พรีเมียร์ลีก : เซลติก -vs- อเบอร์ดีน
+						</td>
+						<td class="text-center">
+							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+						</td>
+						<td class="text-center">
+							นายมั่นคง
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/hot2.gif" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="b-subject">
+							<span class="label label-warning">ทีเด็ด</span> โอเวอร์...เจอ จับ แจก!!
+						</td>
+						<td class="text-center">
+							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+						</td>
+						<td class="text-center">
+							นายมั่นคง
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/hot2.gif" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="b-subject">
+							<span class="label label-warning">ทีเด็ด</span> โอเวอร์...เจอ จับ แจก!!
+						</td>
+						<td class="text-center">
+							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+						</td>
+						<td class="text-center">
+							นายมั่นคง
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/hot2.gif" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							14:00
+							<div class="match-date">
+								31/01
+							</div>
+						</td>
+						<td class="b-subject">
+							<span class="label label-warning">ทีเด็ด</span> โอเวอร์...เจอ จับ แจก!!
+						</td>
+						<td class="text-center">
+							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+						</td>
+						<td class="text-center">
+							นายมั่นคง
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/hot2.gif" alt="">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="section text-center margin-top-15">
+				<img src="<?php echo base_url()?>images/banners/banner728.png" alt="<?php echo $setting["alt"];?>">
+			</div>
+			<div class="section margin-top-15">
+				<div class="nav-title nav-block">
+					<h2>
+						<div class="title-text">
+							<i class="fa fa-futbol-o" aria-hidden="true"></i>
+							ตารางบอล
+						</div>
+
+					</h2>
+				</div>
+				<table class="table-custom table-hover table-score">
+					<tr>
+						<td colspan="6" class="row-leagues">
+							<img src="<?php echo base_url()?>images/leagues/premier-league.png" alt="">
+							พรีเมียร์ลีกอังกฤษ (Premier League)
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<a href="#Go to match">
+								14:00
+								<div class="match-date">
+									31/01
+								</div>
+							</a>
+						</td>
+						<td class="text-right">
+							<a href="#Go to match">
+								เวสต์แฮมยูไนเต็ด
+								<div class="match-date">
+									โหวต 29.01%
+								</div>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match">
+								1 - 1
+							</a>
+						</td>
+						<td class="text-left">
+							<a href="#Go to match">
+								<span class="bet-win">แมนเชสเตอร์ ซิตี้</span>
+								<div class="match-date">
+									โหวต 29.01%
+								</div>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+								0.5/1 +5
+								<br>
+								1
+							</a>
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/chanels/bin1.png" alt="">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="text-center">
+							<a href="#Go to match">
+								14:00
+								<div class="match-date">
+									31/01
+								</div>
+							</a>
+						</td>
+						<td class="text-right">
+							<a href="#Go to match">
+								<span class="bet-win">แมนเชสเตอร์ ซิตี้</span>
+								<div class="match-date">
+									โหวต 29.01%
+								</div>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match">
+								3 - 2
+							</a>
+						</td>
+						<td class="text-left">
+							<a href="#Go to match">
+								เวสต์แฮมยูไนเต็ด
+								<div class="match-date">
+									โหวต 29.01%
+								</div>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+								0.5/1 +5
+								<br>
+								1
+							</a>
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/chanels/bin2.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<a href="#Go to match">
+								14:00
+								<div class="match-date">
+									31/01
+								</div>
+							</a>
+						</td>
+						<td class="text-right">
+							<a href="#Go to match">
+								<span class="bet-win">แมนเชสเตอร์ ซิตี้</span>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match">
+								VS
+							</a>
+						</td>
+						<td class="text-left">
+							<a href="#Go to match">
+								เวสต์แฮมยูไนเต็ด
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+								0.5/1 +5
+								<br>
+								1
+							</a>
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/chanels/bin2.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<a href="#Go to match">
+								14:00
+								<div class="match-date">
+									31/01
+								</div>
+							</a>
+						</td>
+						<td class="text-right">
+							<a href="#Go to match">
+								<span class="bet-win">แมนเชสเตอร์ ซิตี้</span>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match">
+								VS
+							</a>
+						</td>
+						<td class="text-left">
+							<a href="#Go to match">
+								เวสต์แฮมยูไนเต็ด
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+								0.5/1 +5
+								<br>
+								1
+							</a>
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/chanels/bin2.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6" class="row-leagues">
+							<img src="<?php echo base_url()?>images/leagues/premier-league.png" alt="">
+							พรีเมียร์ลีกอังกฤษ (Premier League)
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<a href="#Go to match">
+								14:00
+								<div class="match-date">
+									31/01
+								</div>
+							</a>
+						</td>
+						<td class="text-right">
+							<a href="#Go to match">
+								<span class="bet-win">แมนเชสเตอร์ ซิตี้</span>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match">
+								VS
+							</a>
+						</td>
+						<td class="text-left">
+							<a href="#Go to match">
+								เวสต์แฮมยูไนเต็ด
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+								0.5/1 +5
+								<br>
+								1
+							</a>
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/chanels/bin2.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<a href="#Go to match">
+								14:00
+								<div class="match-date">
+									31/01
+								</div>
+							</a>
+						</td>
+						<td class="text-right">
+							<a href="#Go to match">
+								<span class="bet-win">แมนเชสเตอร์ ซิตี้</span>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match">
+								VS
+							</a>
+						</td>
+						<td class="text-left">
+							<a href="#Go to match">
+								เวสต์แฮมยูไนเต็ด
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+								0.5/1 +5
+								<br>
+								1
+							</a>
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/chanels/bin2.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<a href="#Go to match">
+								14:00
+								<div class="match-date">
+									31/01
+								</div>
+							</a>
+						</td>
+						<td class="text-right">
+							<a href="#Go to match">
+								<span class="bet-win">แมนเชสเตอร์ ซิตี้</span>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match">
+								VS
+							</a>
+						</td>
+						<td class="text-left">
+							<a href="#Go to match">
+								เวสต์แฮมยูไนเต็ด
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+								0.5/1 +5
+								<br>
+								1
+							</a>
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/chanels/bin2.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<a href="#Go to match">
+								14:00
+								<div class="match-date">
+									31/01
+								</div>
+							</a>
+						</td>
+						<td class="text-right">
+							<a href="#Go to match">
+								<span class="bet-win">แมนเชสเตอร์ ซิตี้</span>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match">
+								VS
+							</a>
+						</td>
+						<td class="text-left">
+							<a href="#Go to match">
+								เวสต์แฮมยูไนเต็ด
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+								0.5/1 +5
+								<br>
+								1
+							</a>
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/chanels/bin2.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<a href="#Go to match">
+								14:00
+								<div class="match-date">
+									31/01
+								</div>
+							</a>
+						</td>
+						<td class="text-right">
+							<a href="#Go to match">
+								<span class="bet-win">แมนเชสเตอร์ ซิตี้</span>
+								<div class="match-date">
+									โหวต 30%
+								</div>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match">
+								VS
+							</a>
+						</td>
+						<td class="text-left">
+							<a href="#Go to match">
+								เวสต์แฮมยูไนเต็ด
+							</a>
+							<div class="match-date">
+								โหวต 70%
+							</div>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+								0.5/1 +5
+								<br>
+								1
+							</a>
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/chanels/bin2.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<a href="#Go to match">
+								14:00
+								<div class="match-date">
+									31/01
+								</div>
+							</a>
+						</td>
+						<td class="text-right">
+							<a href="#Go to match">
+								<span class="bet-win">แมนเชสเตอร์ ซิตี้</span>
+								<div class="match-date">
+									โหวต 70%
+								</div>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match">
+								VS
+							</a>
+						</td>
+						<td class="text-left">
+							<a href="#Go to match">
+								เวสต์แฮมยูไนเต็ด
+								<div class="match-date">
+									โหวต 29.01%
+								</div>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+								0.5/1 +5
+								<br>
+								1
+							</a>
+						</td>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/chanels/bin2.png" alt="">
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="section margin-top-15 hilight">
+				<div class="nav-title nav-block">
+					<h2>
+						<div class="title-text">
+							<i class="fa fa-futbol-o" aria-hidden="true"></i>
+							ไฮไลท์ฟุตบอล คลิปฟุตบอล
+						</div>
+
+					</h2>
+				</div>
+				<div class="tabbable-panel">
+					<div class="tabbable-line">
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a href="#tab_below_1" data-toggle="tab">
+									<img src="http://guruballteng.demo/images/leagues/premier-league.png" alt="" data-pin-nopin="true">
+									พรีเมียร์ลีกอังกฤษ </a>
+							</li>
+							<li class="">
+								<a href="#tab_below_2" data-toggle="tab">
+									<img src="http://guruballteng.demo/images/leagues/premier-league.png" alt="" data-pin-nopin="true">
+									พรีเมียร์ลีกอังกฤษ </a>
+							</li>
+							<li>
+								<a href="#tab_below_3" data-toggle="tab">
+									<img src="http://guruballteng.demo/images/leagues/premier-league.png" alt="" data-pin-nopin="true">
+									พรีเมียร์ลีกอังกฤษ </a>
+							</li>
+						</ul>
+					</div>
+				</div>
 
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/homes/homes.php</code>
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Home.php</code>
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
+						<p>
+							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
+						</p>
+					</div>
+					<div class="col-md-3">
+						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
+						<p>
+							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
+						</p>
+					</div>
+					<div class="col-md-3">
+						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
+						<p>
+							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
+						</p>
+					</div>
+					<div class="col-md-3">
+						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
+						<p>
+							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
+						</p>
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-3">
+						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
+						<p>
+							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
+						</p>
+					</div>
+					<div class="col-md-3">
+						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
+						<p>
+							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
+						</p>
+					</div>
+					<div class="col-md-3">
+						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
+						<p>
+							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
+						</p>
+					</div>
+					<div class="col-md-3">
+						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
+						<p>
+							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="section">
+				<div class="warpper-chat">
+					<div class="topic-title">
+						<h2 class="margin">
+							<i class="fa fa-comments-o" aria-hidden="true"></i> เซียนเขาคุยกัน
+						</h2>
+					</div>
+					<div class="chat-box">
+						<div class="chat-message">
+							<img src="<?php echo base_url()?>images/avatars/person-flat.png" />
+							<span class="chat-user">Gu na ja</span>
+							<span class="message-text">สวัสดีจ้า</span>
+						</div>
+
+						<div class="chat-message">
+							<img src="<?php echo base_url()?>images/avatars/box-flat-128x128.png" />
+							<span class="chat-user">Gu na ja</span>
+							<span class="message-text">สวัสดีจ้า</span>
+						</div>
+
+						<div class="chat-message text-right">
+							<span class="message-text">สวัสดีจ้า</span>
+							<span class="chat-user">Gu na ja</span>
+							<img src="<?php echo base_url()?>images/avatars/person-girl-flat.png" />
+						</div>
+
+						<div class="chat-message admin">
+							<img src="<?php echo base_url()?>images/avatars/badge-simple-flat-128x128.png" />
+							<span class="chat-user">Gu na ja</span>
+							<span class="message-text">เรา admin นะจ๊ะ</span>
+						</div>
+
+					</div>
+					<div class="warpper-input-message">
+						<div class="input-message">
+							<span>
+							<img src="<?php echo base_url()?>images/avatars/person-girl-flat.png"/>
+							</span>
+								<input type="text" name="message" id="message-input" placeholder="พูดอะไรสักอย่างสิ..." />
+							<span>
+								<button class="btn" type="button"><i class="fa fa-send-o" aria-hidden="true"></i></button>
+							</span>
+						</div>
+						<div class="text-word">
+							0/100
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="section text-center margin-top-15">
+				<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>">
+			</div>
+			<div class="section margin-top-15">
+				<div class="nav-title nav-block">
+					<h2>
+						<div class="title-text">
+							5 อันดับ Tipster
+						</div>
+
+					</h2>
+				</div>
+				<table class="table-custom table-hover table-rank">
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/icon-award_04.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/icon-award_07.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/number-3-th.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							4
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							5
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+
+				</table>
+			</div>
+			<div class="section margin-top-15">
+				<div class="nav-title nav-block">
+					<h2>
+						<div class="title-text">
+							Top 5 ประจำสัปดาห์
+						</div>
+
+					</h2>
+				</div>
+				<table class="table-custom table-hover table-rank">
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/icon-award_04.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/icon-award_07.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/number-3-th.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							4
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							5
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+
+				</table>
+			</div>
+			<div class="section margin-top-15">
+				<div class="nav-title nav-block">
+					<h2>
+						<div class="title-text">
+							เซียนบอลเดี่ยว
+						</div>
+
+					</h2>
+				</div>
+				<table class="table-custom table-hover table-rank">
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/icon-award_04.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/icon-award_07.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/number-3-th.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							4
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							5
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+
+				</table>
+			</div>
+			<div class="section margin-top-15">
+				<div class="nav-title nav-block">
+					<h2>
+						<div class="title-text">
+							เซียนสเต็ป 5
+						</div>
+
+					</h2>
+				</div>
+				<table class="table-custom table-hover table-rank">
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/icon-award_04.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/icon-award_07.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							<img src="<?php echo base_url()?>images/number-3-th.png" alt="">
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							4
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+					<tr>
+						<td class="text-center">
+							5
+						</td>
+						<td class="text-left">
+							Sports Special
+						</td>
+						<td class="text-center">
+							10%
+						</td>
+						<td class="text-center">
+							1,024 P
+						</td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
 
-</body>
-</html>
+
+</div><!-- /.container -->

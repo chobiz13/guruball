@@ -1149,7 +1149,7 @@
 							</span>
 								<input type="text" name="message" id="message-input" placeholder="พูดอะไรสักอย่างสิ..." />
 							<span>
-								<button class="btn" type="button"><i class="fa fa-send-o" aria-hidden="true"></i></button>
+								<button class="btn" type="button"><i class="icon-speech icons"></i></button>
 							</span>
 						</div>
 						<div class="text-word">

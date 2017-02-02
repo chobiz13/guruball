@@ -1,11 +1,12 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8">
+
 			<div class="section">
 				<div class="nav-title">
 					<h2>
 						<div class="title-text">
-							<i class="fa fa-line-chart" aria-hidden="true"></i>
+							<i class="icon-graph icons"></i>
 							วิเคราะห์บอล สเต็ปบอล Tipster วันนี้
 						</div>
 					</h2>
@@ -348,17 +349,19 @@
 				</div>
 			</div>
 			<div class="section text-center margin-top-15">
-				<img src="<?php echo base_url()?>images/banners/banner728.png" alt="<?php echo $setting["alt"];?>">
+				<img src="http://registersbo.com/wp-content/uploads/2016/10/banner-star.jpg" alt="<?php echo $setting["alt"];?>">
 			</div>
 			<div class="section margin-top-15">
-				<div class="nav-title nav-block">
+				<div class="nav-title">
 					<h2>
 						<div class="title-text">
-							<i class="fa fa-commenting-o" aria-hidden="true"></i>
+							<i class="icon-book-open icons"></i>
 							เว็บบอร์ด วิเคราะห์บอล สเต็ปบอล ทีเด็ดฟุตบอลวันนี้
 						</div>
-
 					</h2>
+					<span>
+						<a href="#" class="btn btn-default btn-xs pull-right more">ดูทั้งหมด</a>
+					</span>
 				</div>
 				<table class="table-custom table-hover">
 					<tr>
@@ -372,7 +375,7 @@
 							<span class="label label-success">วิเคราะห์บอล</span> พรีเมียร์ลีก : สโต๊ค ซิตี้ -vs- เอฟเวอร์ตัน
 						</td>
 						<td class="text-center">
-							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+							<span class="badge badge-none"><i class="icon-eye icons"></i> 4,547 </span>
 						</td>
 						<td class="text-center">
 							นายมั่นคง
@@ -398,7 +401,7 @@
 							<span class="label label-warning">ทีเด็ด</span> โอเวอร์...เจอ จับ แจก!!
 						</td>
 						<td class="text-center">
-							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 347 </span>
+							<span class="badge badge-none"><i class="icon-eye icons"></i> 347 </span>
 						</td>
 						<td class="text-center">
 							นายมั่นคง
@@ -418,7 +421,7 @@
 							<span class="label label-danger">สเต็ป</span> ฟุตบอล วันนี้
 						</td>
 						<td class="text-center">
-							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 504 </span>
+							<span class="badge badge-none"><i class="icon-eye icons"></i> 504 </span>
 						</td>
 						<td class="text-center">
 							นายมั่นคง
@@ -438,7 +441,7 @@
 							<span class="label label-danger">สเต็ป</span> <span class="label label-warning">ทีเด็ด</span> ลูกหนัง โดยเหล่าเซียนบอล
 						</td>
 						<td class="text-center">
-							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 3,001 </span>
+							<span class="badge badge-none"><i class="icon-eye icons"></i> 3,001 </span>
 						</td>
 						<td class="text-center">
 							นายมั่นคง
@@ -458,7 +461,7 @@
 							หุ้นราคา 5 ลีกดังตลอดสัปดาห์
 						</td>
 						<td class="text-center">
-							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+							<span class="badge badge-none"><i class="icon-eye icons"></i> 4,547 </span>
 						</td>
 						<td class="text-center">
 							นายมั่นคง
@@ -478,7 +481,7 @@
 							<span class="label label-success">วิเคราะห์บอล</span> แชมเปี้ยนชิพ : เบอร์ตัน -vs- ฟูแล่ม
 						</td>
 						<td class="text-center">
-							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+							<span class="badge badge-none"><i class="icon-eye icons"></i> 4,547 </span>
 						</td>
 						<td class="text-center">
 							นายมั่นคง
@@ -498,7 +501,7 @@
 							<span class="label label-success">วิเคราะห์บอล</span> สกอตติช พรีเมียร์ลีก : เซลติก -vs- อเบอร์ดีน
 						</td>
 						<td class="text-center">
-							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+							<span class="badge badge-none"><i class="icon-eye icons"></i> 4,547 </span>
 						</td>
 						<td class="text-center">
 							นายมั่นคง
@@ -518,7 +521,7 @@
 							<span class="label label-warning">ทีเด็ด</span> โอเวอร์...เจอ จับ แจก!!
 						</td>
 						<td class="text-center">
-							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+							<span class="badge badge-none"><i class="icon-eye icons"></i> 4,547 </span>
 						</td>
 						<td class="text-center">
 							นายมั่นคง
@@ -538,7 +541,7 @@
 							<span class="label label-warning">ทีเด็ด</span> โอเวอร์...เจอ จับ แจก!!
 						</td>
 						<td class="text-center">
-							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+							<span class="badge badge-none"><i class="icon-eye icons"></i> 4,547 </span>
 						</td>
 						<td class="text-center">
 							นายมั่นคง
@@ -558,7 +561,7 @@
 							<span class="label label-warning">ทีเด็ด</span> โอเวอร์...เจอ จับ แจก!!
 						</td>
 						<td class="text-center">
-							<span class="badge badge-none"><i class="fa fa-eye" aria-hidden="true"></i> 4,547 </span>
+							<span class="badge badge-none"><i class="icon-eye icons"></i> 4,547 </span>
 						</td>
 						<td class="text-center">
 							นายมั่นคง
@@ -576,7 +579,7 @@
 				<div class="nav-title nav-block">
 					<h2>
 						<div class="title-text">
-							<i class="fa fa-futbol-o" aria-hidden="true"></i>
+							<i class="icon-list icons"></i>
 							ตารางบอล
 						</div>
 
@@ -977,7 +980,7 @@
 				<div class="nav-title nav-block">
 					<h2>
 						<div class="title-text">
-							<i class="fa fa-futbol-o" aria-hidden="true"></i>
+							<i class="icon-social-youtube icons"></i>
 							ไฮไลท์ฟุตบอล คลิปฟุตบอล
 						</div>
 
@@ -1064,9 +1067,53 @@
 		<div class="col-md-4">
 			<div class="section">
 				<div class="warpper-chat">
-					<div class="topic-title">
+					<div class="nav-title">
 						<h2 class="margin">
-							<i class="fa fa-comments-o" aria-hidden="true"></i> เซียนเขาคุยกัน
+							<i class="icon-user icons"></i> ข้อมูลส่วนตัว
+						</h2>
+					</div>
+					<div class="shot-profile">
+						<div class="row">
+							<div class="col-md-3">
+								<img src="<?php echo base_url()?>images/avatars/badge-simple-flat-128x128.png" class="img-responsive">
+							</div>
+							<div class="col-md-9">
+								<div class="full-name">
+									xxxxx xxxxxxx
+								</div>
+								<div class="alias">
+									<span>ฉายา : </span>พระเจ้าเหา 10 ทิศ
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="col-md-6 line">
+								<div class="level">
+									เลเวล
+									<div class="number">
+										5
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="point">
+									คะแนนรวม
+									<div class="number">
+										3,001
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="section margin-top-15">
+				<div class="warpper-chat">
+					<div class="nav-title">
+						<h2 class="margin">
+							<i class="icon-speech icons"></i> เซียนเขาคุยกัน
 						</h2>
 					</div>
 					<div class="chat-box">
@@ -1113,6 +1160,42 @@
 				</div>
 
 			</div>
+
+			<div class="section margin-top-15">
+				<div class="reward">
+					<div class="row">
+						<div class="col-md-4">
+							<img src="https://www.mts.ca/file_source/mts/assets/img/wireless_devices/iphones/iphonerefresh/iPhone7Plus.png" alt="" class="img-responsive">
+							<div class="reward-title">
+								รางวัลที่ 1
+								<div class="small-text">
+									Iphone 7 Plus 32GB
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<img src="https://www.mts.ca/file_source/mts/assets/img/wireless_devices/iphones/iphonerefresh/iPhone7Plus.png" alt="" class="img-responsive">
+							<div class="reward-title">
+								รางวัลที่ 2
+								<div class="small-text">
+									Iphone 7 Plus 32GB
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<img src="https://www.mts.ca/file_source/mts/assets/img/wireless_devices/iphones/iphonerefresh/iPhone7Plus.png" alt="" class="img-responsive">
+							<div class="reward-title">
+								รางวัลที่ 3
+								<div class="small-text">
+									Iphone 7 Plus 32GB
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
 			<div class="section text-center margin-top-15">
 				<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>">
 			</div>
@@ -1128,7 +1211,12 @@
 				<table class="table-custom table-hover table-rank">
 					<tr>
 						<td class="text-center">
-							<img src="<?php echo base_url()?>images/icon-award_04.png" alt="">
+							<div class="warper-ribbon">
+								<div class="ribbon">
+									1
+								</div>
+							</div>
+
 						</td>
 						<td class="text-left">
 							Sports Special
@@ -1142,7 +1230,11 @@
 					</tr>
 					<tr>
 						<td class="text-center">
-							<img src="<?php echo base_url()?>images/icon-award_07.png" alt="">
+							<div class="warper-ribbon">
+								<div class="ribbon silver">
+									2
+								</div>
+							</div>
 						</td>
 						<td class="text-left">
 							Sports Special
@@ -1156,7 +1248,11 @@
 					</tr>
 					<tr>
 						<td class="text-center">
-							<img src="<?php echo base_url()?>images/number-3-th.png" alt="">
+							<div class="warper-ribbon">
+								<div class="ribbon copper">
+									3
+								</div>
+							</div>
 						</td>
 						<td class="text-left">
 							Sports Special

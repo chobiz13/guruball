@@ -1,0 +1,17 @@
+This package contains the lib files, ERRATA.md, LICENSE, README.md & SECURITY.md from the 1.1.5 release of random_compat @ https://github.com/paragonie/random_compat/releases/tag/1.1.5
+
+The following directories / files were removed as they are not required for vB and the creators of random_compat did not request that maintain them :
+-----------------------
+tests
+tests/*
+.gitignore
+.scrutinizer.yml
+.travis.yml
+composer.json
+phpunit.sh
+phpunit.xml.dist
+-----------------------
+
+Note, I am including SECURITY.md out of consideration for the project owners (Paragon Initiative), but is not functionally required.
+
+I am including ERRATA.md as a handy list of random sources that the lib requires.

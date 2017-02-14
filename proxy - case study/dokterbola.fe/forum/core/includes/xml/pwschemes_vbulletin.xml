@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<schemes>
+	<scheme name='blowfish:10' priority='10' />
+	<scheme name='legacy' priority='1' />
+</schemes>

@@ -586,12 +586,92 @@
 					</h2>
 				</div>
 				<table class="table-custom table-hover table-score">
-					<tr>
-						<td colspan="6" class="row-leagues">
-							<img src="<?php echo base_url()?>images/leagues/premier-league.png" alt="">
-							พรีเมียร์ลีกอังกฤษ (Premier League)
-						</td>
-					</tr>
+
+                    <?php
+                    $check_league = null;
+                    foreach ($match_response->result() as $match)
+                    {
+                        if($check_league != $match->LEAGUE_ID)
+                        {
+                            $check_league = $match->LEAGUE_ID;
+                            ?>
+                            <tr>
+                                <td colspan="6" class="row-leagues">
+                                    <img src="<?php echo base_url($match->LEAGUE_FLAG);?>" alt="<?php echo $match->LEAGUE_NAME." - ".$match->LEAGUE_NAME_EN;?>">
+                                    <?php echo $match->LEAGUE_NAME." - ".$match->LEAGUE_NAME_EN;?>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                        <tr>
+                            <td class="text-center">
+                                <a href="#Go to match">
+                                    <?php echo date("H:i", strtotime($match->MATCH_PLAYOFF));?>
+                                    <div class="match-date">
+                                        <?php echo date("d-M", strtotime($match->MATCH_PLAYOFF));?>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="text-right">
+                                <a href="#Go to match">
+                                    <?php
+                                    $data_home_team = $this->teams_model->team_filter_id($match->MATCH_HOMETEAM)->first_row();
+                                    echo $data_home_team->TEAM_NAME;
+                                    ?>
+                                    <img src="<?php echo base_url($data_home_team->TEAM_FLAG);?>" alt="<?php echo $data_home_team->TEAM_NAME." - ".$data_home_team->TEAM_NAME_EN;?>" width="20px" />
+                                    <div class="match-date">
+                                        โหวต 29.01%
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a href="#Go to match">
+                                    <?php
+                                    if($match->MATCH_STATUS_ID == 1)
+                                    {
+                                        echo "VS";
+                                    }
+                                    else if($match->MATCH_STATUS_ID == 2)
+                                    {
+                                        echo $match->MATCH_HOMESCORE." - ".$match->MATCH_AWAYSCORE;
+                                    }
+                                    else if($match->MATCH_STATUS_ID == 3)
+                                    {
+                                        echo "Cancel";
+                                    }
+                                    ?>
+                                </a>
+                            </td>
+                            <td class="text-left">
+                                <a href="#Go to match">
+                                    <?php
+                                    $data_away_team = $this->teams_model->team_filter_id($match->MATCH_AWAYTEAM)->first_row();
+                                    ?>
+                                    <img src="<?php echo base_url($data_away_team->TEAM_FLAG);?>" alt="<?php echo $data_away_team->TEAM_NAME." - ".$data_away_team->TEAM_NAME_EN;?>" width="20px" />
+                                    <span class="bet-win">
+                                        <?php echo $data_away_team->TEAM_NAME;?>
+                                    </span>
+                                    <div class="match-date">
+                                        โหวต 29.01%
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
+                                    0.5/1 +5
+                                    <br>
+                                    1
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <img src="<?php echo base_url()?>images/chanels/bin1.png" alt="">
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    <?php /*?>
 					<tr>
 						<td class="text-center">
 							<a href="#Go to match">
@@ -973,6 +1053,7 @@
 							<img src="<?php echo base_url()?>images/chanels/bin2.png" alt="">
 						</td>
 					</tr>
+                    <?php */?>
 				</table>
 			</div>
 

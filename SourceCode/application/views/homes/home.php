@@ -607,9 +607,15 @@
                         <tr>
                             <td class="text-center">
                                 <a href="#Go to match">
-                                    <?php echo date("H:i", strtotime($match->MATCH_PLAYOFF));?>
+                                    <?php
+                                    $match_timestamp = strtotime($match->MATCH_PLAYOFF);
+                                    ?>
+                                    <?php echo date("H:i", $match_timestamp);?>
                                     <div class="match-date">
-                                        <?php echo date("d-M", strtotime($match->MATCH_PLAYOFF));?>
+                                        <?php echo date("d", strtotime($match->MATCH_PLAYOFF));?>
+                                        <?php
+                                        echo $this->date_model->month($match_timestamp);
+                                        ?>
                                     </div>
                                 </a>
                             </td>
@@ -628,15 +634,15 @@
                             <td class="text-center">
                                 <a href="#Go to match">
                                     <?php
-                                    if($match->MATCH_STATUS_ID == 1)
+                                    if($match->MATCH_STATUS_ID == 2)
                                     {
                                         echo "VS";
                                     }
-                                    else if($match->MATCH_STATUS_ID == 2)
+                                    else if($match->MATCH_STATUS_ID == 1 || $match->MATCH_STATUS_ID == 3)
                                     {
                                         echo $match->MATCH_HOMESCORE." - ".$match->MATCH_AWAYSCORE;
                                     }
-                                    else if($match->MATCH_STATUS_ID == 3)
+                                    else if($match->MATCH_STATUS_ID == 4)
                                     {
                                         echo "Cancel";
                                     }
@@ -657,15 +663,52 @@
                                     </div>
                                 </a>
                             </td>
-                            <td class="text-center">
+                            <td class="text-center match-price">
                                 <a href="#Go to match แล้วไปที่ตารางค่าน้ำ ดูจาก Goal.in.th">
-                                    0.5/1 +5
-                                    <br>
-                                    1
+                                    <?php
+                                    if($match->MATCH_HOMEPRICE != null)
+                                    {
+                                        foreach (json_decode($match->MATCH_HOMEPRICE) as $match_price)
+                                        {
+                                            ?>
+                                            <div>
+                                                <?php
+                                                    echo $match_price;
+                                                ?>
+                                            </div>
+                                            <?php
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if(count(json_decode($match->MATCH_AWAYPRICE)))
+                                        foreach (json_decode($match->MATCH_AWAYPRICE) as $match_price)
+                                        {
+                                            ?>
+                                            <div>
+                                                <?php
+                                                    echo $match_price;
+                                                ?>
+                                            </div>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
                                 </a>
                             </td>
-                            <td class="text-center">
-                                <img src="<?php echo base_url()?>images/chanels/bin1.png" alt="">
+                            <td class="text-center channel">
+                                <?php
+                                $channel_response = $this->channels_model->channel_filter_id(rand(1,20)); // DATA DEMO Random
+                                if($channel_response->num_rows())
+                                {
+                                    foreach ($channel_response->result() as $channel)
+                                    {
+                                        ?>
+                                        <img src="<?php echo base_url($channel->CHANNEL_IMAGE)?>" alt="<?php echo $channel->CHANNEL_NAME;?>">
+                                        <?php
+                                    }
+                                }
+                                ?>
                             </td>
                         </tr>
                         <?php
@@ -1147,46 +1190,97 @@
 		</div>
 		<div class="col-md-4">
 			<div class="section">
-				<div class="warpper-chat">
-					<div class="nav-title">
-						<h2 class="margin">
-							<i class="icon-user icons"></i> ข้อมูลส่วนตัว
-						</h2>
-					</div>
-					<div class="shot-profile">
-						<div class="row">
-							<div class="col-md-3">
-								<img src="<?php echo base_url()?>images/avatars/badge-simple-flat-128x128.png" class="img-responsive">
-							</div>
-							<div class="col-md-9">
-								<div class="full-name">
-									xxxxx xxxxxxx
-								</div>
-								<div class="alias">
-									<span>ฉายา : </span>พระเจ้าเหา 10 ทิศ
-								</div>
-							</div>
-							<div class="clearfix"></div>
-							<div class="col-md-6 line">
-								<div class="level">
-									เลเวล
-									<div class="number">
-										5
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="point">
-									คะแนนรวม
-									<div class="number">
-										3,001
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                <?php
+                if($this->access_model->check_access())
+                {
+                    ?>
+                    <div class="warpper-chat">
+                        <div class="nav-title">
+                            <h2 class="margin">
+                                <i class="icon-user icons"></i> ข้อมูลส่วนตัว
+                            </h2>
+                        </div>
+                        <div class="shot-profile">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="<?php echo base_url()?>images/avatars/badge-simple-flat-128x128.png" class="img-responsive">
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="full-name">
+                                        xxxxx xxxxxxx
+                                    </div>
+                                    <div class="alias">
+                                        <span>ฉายา : </span>พระเจ้าเหา 10 ทิศ
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-md-6 line">
+                                    <div class="level">
+                                        เลเวล
+                                        <div class="number">
+                                            5
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="point">
+                                        คะแนนรวม
+                                        <div class="number">
+                                            3,001
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-				</div>
+                    </div>
+                    <?php
+                }
+                else
+                {
+                    ?>
+                    <div class="warpper-chat">
+                        <div class="nav-title">
+                            <h2 class="margin">
+                                <i class="icon-key icons"></i> เข้าสู่ระบบ
+                            </h2>
+                        </div>
+                        <div class="login-box">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="account-box">
+                                        <div class="alert-response"></div>
+                                        <form class="form-signin" action="<?php echo base_url("login/process")?>" method="post">
+                                            <div class="form-group">
+                                                <input type="text" name="username" class="form-control" placeholder="ชื่อผู้ใช้" required autofocus />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" name="password" class="form-control" placeholder="รหัสผ่าน" required />
+                                            </div>
+                                            <button class="btn btn-lg btn-block purple-bg" type="submit">
+                                                <i class="icon-key icons"></i> เข้าสู่ระบบ
+                                            </button>
+                                        </form>
+                                        <a class="forgotLnk" href="" title="">สมัครสมาชิก</a>
+                                        <div class="or-box">
+                                            <span class="or">หรือ</span>
+                                            <div class="row">
+                                                <div class="col-md-12 row-block">
+                                                    <a href="" class="btn btn-facebook btn-block">เข้าสู่ระบบผ่าน Facebook</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <?php
+                }
+                ?>
+
+
 
 			</div>
 

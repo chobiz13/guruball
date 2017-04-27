@@ -598,6 +598,12 @@ a:hover, a:focus {
 .table-custom .match-date.text-success {
   color: green;
 }
+.table-custom .match-price img {
+  width: 10px;
+}
+.table-custom .channel img {
+  height: 16px;
+}
 .table-custom a {
   color: #31404b;
 }
@@ -645,3 +651,80 @@ a:hover, a:focus {
 
 /*----- TAB -----*/
 /* Tabs panel */
+/***** LOGIN BOX *****/
+.account-box {
+  z-index: 3;
+  font-size: 13px !important;
+  font-family: "Helvetica Neue" ,Helvetica,Arial,sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.form-signin .form-control {
+  outline: none;
+  border: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+  transition: .5s ease;
+}
+.form-signin .form-control:focus {
+  border-bottom: 1px solid rgba(213, 23, 19, 0.6);
+}
+
+.forgotLnk {
+  margin-top: 10px;
+  display: block;
+}
+
+.purple-bg {
+  background-color: #6E329D;
+  color: #fff;
+}
+
+.or-box {
+  position: relative;
+  border-top: 1px solid #dfdfdf;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.or {
+  color: #666666;
+  background-color: #ffffff;
+  position: absolute;
+  text-align: center;
+  top: -8px;
+  width: 40px;
+  left: 45%;
+}
+
+.account-box .btn:hover {
+  color: #fff;
+}
+
+.btn-facebook {
+  background-color: #3F639E;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-google {
+  background-color: #454545;
+  color: #fff;
+  font-weight: bold;
+}
+
+.alert.error {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 6px;
+  border-color: transparent;
+}

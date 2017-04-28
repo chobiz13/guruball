@@ -47,7 +47,7 @@ class Login extends MY_Controller
         $post_date = file_get_contents("php://input");
         $data = json_decode($post_date);
         $error_text =   null;
-        if(@$data->data_set == MD5("esportlives"))
+        if(@$data->data_set == MD5("ballteng"))
         {
             // username check
             $user_name_check    =   array(
@@ -101,7 +101,7 @@ class Login extends MY_Controller
                     "MEMBER_PASSWORD"   =>  MD5(sha1($data->username.$data->password)),
                 );
                 $member_id      =   $this->member_model->member_insert($member_array);
-                $token_access   =   $this->access_model->set_token($data->username , $data->username , base_url()."medias/images/small-esportlives.png");
+                $token_access   =   $this->access_model->set_token($data->username , $data->username , base_url()."medias/images/small-ballteng.png");
                 $this->access_model->set_member_log($token_access , $member_id);
                 $this->access_model->set_cookie($token_access);
                 ?>
@@ -162,7 +162,7 @@ class Login extends MY_Controller
                 $member_alias = $member->MEMBER_ALIAS;
                 $member_avatar = $member->MEMBER_AVATAR;
                 if (!$member_avatar) {
-                    $member_avatar = base_url("medias/images/small-esportlives.png");
+                    $member_avatar = base_url("medias/images/small-ballteng.png");
                 }
 
                 $token_access = $this->access_model->set_token($member_username, $member_alias, $member_avatar);

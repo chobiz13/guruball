@@ -728,3 +728,8 @@ a:hover, a:focus {
   margin-bottom: 6px;
   border-color: transparent;
 }
+
+.account-box label {
+  color: #929292;
+  font-size: 12px;
+}

@@ -1099,7 +1099,7 @@
                     <?php */?>
 				</table>
 			</div>
-
+            <!-- VIDEO LIST -->
 			<div class="section margin-top-15 hilight">
 				<div class="nav-title nav-block">
 					<h2>
@@ -1107,84 +1107,70 @@
 							<i class="icon-social-youtube icons"></i>
 							ไฮไลท์ฟุตบอล คลิปฟุตบอล
 						</div>
-
 					</h2>
 				</div>
 				<div class="tabbable-panel">
 					<div class="tabbable-line">
 						<ul class="nav nav-tabs">
-							<li class="active">
-								<a href="#tab_below_1" data-toggle="tab">
-									<img src="http://guruballteng.demo/images/leagues/premier-league.png" alt="" data-pin-nopin="true">
-									พรีเมียร์ลีกอังกฤษ </a>
-							</li>
-							<li class="">
-								<a href="#tab_below_2" data-toggle="tab">
-									<img src="http://guruballteng.demo/images/leagues/premier-league.png" alt="" data-pin-nopin="true">
-									พรีเมียร์ลีกอังกฤษ </a>
-							</li>
-							<li>
-								<a href="#tab_below_3" data-toggle="tab">
-									<img src="http://guruballteng.demo/images/leagues/premier-league.png" alt="" data-pin-nopin="true">
-									พรีเมียร์ลีกอังกฤษ </a>
-							</li>
+                            <?php
+                            $league_count = 1;
+                            foreach ($league_response->result() as $league)
+                            {
+
+                                ?>
+                                <li <?php if($league_count == 1){ echo 'class="active"'; }?>>
+                                    <a href="#league<?php echo $league->LEAGUE_ID;?>" data-toggle="tab" title="<?php echo $league->LEAGUE_NAME." ".$league->LEAGUE_NAME_EN?>">
+                                        <img src="<?php echo base_url($league->LEAGUE_FLAG);?>" alt="<?php echo $league->LEAGUE_NAME." ".$league->LEAGUE_NAME_EN?>" data-pin-nopin="true">
+                                        <?php echo $league->LEAGUE_NAME?>
+                                    </a>
+                                </li>
+                                <?php
+                                $league_count ++;
+                            }
+                            ?>
 						</ul>
 					</div>
 				</div>
-
-
-
-
 				<div class="row">
-					<div class="col-md-3">
-						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
-						<p>
-							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
-						</p>
-					</div>
-					<div class="col-md-3">
-						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
-						<p>
-							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
-						</p>
-					</div>
-					<div class="col-md-3">
-						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
-						<p>
-							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
-						</p>
-					</div>
-					<div class="col-md-3">
-						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
-						<p>
-							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
-						</p>
-					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-3">
-						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
-						<p>
-							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
-						</p>
-					</div>
-					<div class="col-md-3">
-						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
-						<p>
-							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
-						</p>
-					</div>
-					<div class="col-md-3">
-						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
-						<p>
-							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
-						</p>
-					</div>
-					<div class="col-md-3">
-						<img src="<?php echo base_url()?>images/banners/-text.png" alt="<?php echo $setting["alt"];?>" class="img-responsive">
-						<p>
-							ไฮไลท์ฟุตบอล ลิเวอร์พูล 1-1 เชลซี
-						</p>
-					</div>
+                    <div class="tab-content">
+                        <?php
+                        $league_count = 1;
+                        foreach ($league_response->result() as $league) {
+                            ?>
+                            <div id="league<?php echo $league->LEAGUE_ID;?>" class="tab-pane fade in <?php if($league_count == 1){ echo 'active'; }?>">
+                                <?php
+                                $video_response = $this->post_model->spider_goalsarena_filter_id($league->LEAGUE_ID , 12);
+                                if($video_response->num_rows())
+                                {
+                                    $video_count = 1;
+                                    foreach ($video_response->result() as $video)
+                                    {
+                                        ?>
+                                        <div class="col-md-3">
+                                            <a href="#" title="<?php echo $video->FULL_TITLE;?>">
+                                                <img src="<?php echo $video->VIDEO_COVER;?>" alt="<?php echo $video->FULL_TITLE;?>" class="img-responsive">
+                                                <p>
+                                                    <?php echo $video->FULL_TITLE;?>
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <?php
+                                        if($video_count == 4 || $video_count == 8)
+                                            echo "<div class='clearfix'></div>";
+                                        $video_count ++;
+                                    }
+                                }
+                                ?>
+
+                            </div>
+                            <?php
+                            $league_count ++;
+                        }
+                        ?>
+
+                    </div>
+
+
 				</div>
 			</div>
 		</div>
@@ -1240,33 +1226,75 @@
                 {
                     ?>
                     <div class="warpper-chat">
-                        <div class="nav-title">
-                            <h2 class="margin">
-                                <i class="icon-key icons"></i> เข้าสู่ระบบ
-                            </h2>
-                        </div>
-                        <div class="login-box">
-                            <div class="row">
-                                <div class="col-md-12">
+                        <div class="tab-content">
+                            <div id="login-box" class="tab-pane fade in active">
+                                <div class="nav-title">
+                                    <h2 class="margin">
+                                        <i class="icon-key icons"></i> เข้าสู่ระบบ
+                                    </h2>
+                                </div>
+                                <div class="login-box">
                                     <div class="account-box">
                                         <div class="alert-response"></div>
-                                        <form class="form-signin" action="<?php echo base_url("login/process")?>" method="post">
+                                        <form action="<?php echo base_url("accesses/signin")?>" method="post" class="form-signin" id="form-signin" >
                                             <div class="form-group">
-                                                <input type="text" name="username" class="form-control" placeholder="ชื่อผู้ใช้" required autofocus />
+                                                <label for="l-username">ชื่อผู้ใช้</label>
+                                                <input type="text" name="username" id="l-username" class="form-control" placeholder="" required autofocus />
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" name="password" class="form-control" placeholder="รหัสผ่าน" required />
+                                                <label for="l-password">รหัสผ่าน</label>
+                                                <input type="password" name="password" id="l-password" class="form-control" placeholder="" required />
                                             </div>
                                             <button class="btn btn-lg btn-block purple-bg" type="submit">
                                                 <i class="icon-key icons"></i> เข้าสู่ระบบ
                                             </button>
                                         </form>
-                                        <a class="forgotLnk" href="" title="">สมัครสมาชิก</a>
+                                        <a href="#register-box" title="" class="forgotLnk" data-toggle="tab"><i class="icon-user icons"></i> สมัครสมาชิก</a>
                                         <div class="or-box">
                                             <span class="or">หรือ</span>
                                             <div class="row">
                                                 <div class="col-md-12 row-block">
-                                                    <a href="" class="btn btn-facebook btn-block">เข้าสู่ระบบผ่าน Facebook</a>
+                                                    <a href="" class="btn btn-facebook btn-block"><i class="icon-social-facebook icons"></i> เข้าสู่ระบบผ่าน Facebook</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="register-box" class="tab-pane fade in">
+                                <div class="nav-title">
+                                    <h2 class="margin">
+                                        <i class="icon-user icons"></i> สมัครสมาชิก
+                                    </h2>
+                                </div>
+                                <div class="login-box">
+                                    <div class="account-box">
+                                        <div class="register-response"></div>
+                                        <form class="form-signin" id="form-signup" action="<?php echo base_url("accesses/signup")?>" method="post">
+                                            <div class="form-group">
+                                                <label for="r-username">ชื่อผู้ใช้</label>
+                                                <input type="text" name="username" class="form-control" id="r-username" placeholder="" required autofocus />
+                                                <small class="text-danger">กรุณากรอกอย่างน้อย 6 ตัวขึ้นไป</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="r-password">รหัสผ่าน</label>
+                                                <input type="password" name="password" class="form-control" id="r-password" placeholder="" required />
+                                                <small class="text-danger">กรุณากรอกอย่างน้อย 8 ตัวขึ้นไป</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="c-password">ยืนยันรหัสผ่าน</label>
+                                                <input type="password" name="confirmpassword" class="form-control" id="c-password" placeholder="" required />
+                                            </div>
+                                            <button class="btn btn-lg btn-block purple-bg" type="submit">
+                                                <i class="icon-user icons"></i> สมัครสมาชิก
+                                            </button>
+                                        </form>
+                                        <a href="#login-box" title="" class="forgotLnk" data-toggle="tab"><i class="icon-key icons"></i> เข้าสู่ระบบ</a>
+                                        <div class="or-box">
+                                            <span class="or">หรือ</span>
+                                            <div class="row">
+                                                <div class="col-md-12 row-block">
+                                                    <a href="" class="btn btn-facebook btn-block"><i class="icon-social-facebook icons"></i> สมัครผ่าน Facebook</a>
                                                 </div>
                                             </div>
                                         </div>

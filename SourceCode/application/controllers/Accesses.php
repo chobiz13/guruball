@@ -1,5 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-class Login extends MY_Controller
+class Accesses extends MY_Controller
 {
     public function __construct()
     {
@@ -40,98 +40,48 @@ class Login extends MY_Controller
         }
     }
 
-    function register()
+    function signup()
     {
-        $this->load->model("member_model");
+        $this->load->library('form_validation');
 
-        $post_date = file_get_contents("php://input");
-        $data = json_decode($post_date);
-        $error_text =   null;
-        if(@$data->data_set == MD5("ballteng"))
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger error">', '</div>');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[6]|callback_username_check');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]');
+        $this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'required|matches[password]');
+
+        if ($this->form_validation->run() == FALSE)
         {
-            // username check
-            $user_name_check    =   array(
-                "username"  =>  @$data->username
-            );
-            $email_check    =   array(
-                "email" =>  @$data->email
-            );
-            $username_check_response    =   $this->member_model->member_filter($user_name_check);
-            $email_check_response       =   $this->member_model->member_filter($email_check);
-
-            if(utf8_decode(strlen($data->username)) < 4 || utf8_decode(strlen($data->username)) > 10)
-            {
-                $error_text =   "<p class='small'>- กรุณากรอก 'ชื่อผู้ใช้' อย่างน้อย 4-10 ตัวอักษร</p>";
-            }
-            if(utf8_decode(strlen($data->password)) < 6 || utf8_decode(strlen($data->password)) > 20)
-            {
-                $error_text .=   "<p class='small'>- กรุณากรอก 'รหัสผ่าน' อย่างน้อย 6-20 ตัวอักษร</p>".$data->password.strlen($data->password);
-            }
-
-            if($email_check_response->num_rows())
-            {
-                $error_text .=   "<p class='small'>- อีเมลนี้มีผู้ใช้งานอยู่แล้ว</p>";
-            }
-            if($username_check_response->num_rows())
-            {
-                $error_text .=  "<p class='small'>- ชื่อผู้ใช้นี้มีผู้ใช้งานอยู่แล้ว</p>";
-            }
-            if($data->password != $data->confirmpassword)
-            {
-                $error_text .=  "<p class='small'>- รหัสผ่านไม่ตรงกันกรุณาตรวจสอบใหม่</p>";
-            }
-
-            if($error_text)
-            {
-                ?>
-                <div class="alert alert-danger" role="alert">
-                    <?php
-                    echo $error_text;
-                    ?>
-                </div>
-                <?php
-            }
-            else
-            {
-                $member_array   =   array(
-                    "MEMBER_ALIAS"      =>  $data->username,
-                    "MEMBER_USERNAME"   =>  $data->username,
-                    "MEMBER_EMAIL"      =>  $data->email,
-                    "MEMBER_CREATE"     =>  date("Y-m-d H:i:s"),
-                    "MEMBER_PASSWORD"   =>  MD5(sha1($data->username.$data->password)),
-                );
-                $member_id      =   $this->member_model->member_insert($member_array);
-                $token_access   =   $this->access_model->set_token($data->username , $data->username , base_url()."medias/images/small-ballteng.png");
-                $this->access_model->set_member_log($token_access , $member_id);
-                $this->access_model->set_cookie($token_access);
-                ?>
-                <div class="alert alert-success" role="alert">
-                    สมัครสมาชิกเรียบร้อย
-                </div>
-                <script>
-                    setTimeout(function(){
-//                        window.location.href = "./";
-                        location.reload();
-                    }, 1000);
-                </script>
-                <?php
-            }
+            echo validation_errors();
         }
         else
         {
-            redirect(base_url(), 'refresh');
+            $member_array   =   array(
+                "MEMBER_ALIAS"      =>  $this->input->post("username"),
+                "MEMBER_USERNAME"   =>  $this->input->post("username"),
+                "MEMBER_CREATE"     =>  date("Y-m-d H:i:s"),
+                "MEMBER_PASSWORD"   =>  MD5(sha1($this->input->post("username").$this->input->post("password"))),
+            );
+            $member_id      =   $this->member_model->member_insert($member_array);
+
+            $token_access   =   $this->access_model->set_token($this->input->post("username") , $this->input->post("username") , base_url()."medias/images/small-ballteng.png");
+            $this->access_model->set_member_log($token_access , $member_id);
+            $this->access_model->set_cookie($token_access);
             ?>
+            <div class="alert alert-success" role="alert">
+                สมัครสมาชิกเรียบร้อย
+            </div>
             <script>
                 setTimeout(function(){
-                    window.location.href = "./";
+//                        window.location.href = "./";
+                    location.reload();
                 }, 1000);
             </script>
             <?php
-
         }
+
     }
 
-    function process()
+    function signin()
     {
         $this->load->library('form_validation');
 
@@ -150,9 +100,6 @@ class Login extends MY_Controller
                 "username"  =>  $this->input->post("username"),
                 "password"  =>  MD5(sha1($this->input->post("username").$this->input->post("password"))),
             );
-
-            print_r($member_fiter);
-
             $member_response   =   $this->member_model->member_filter($member_fiter);
             if($member_response->num_rows()) {
                 $member = $member_response->first_row();
@@ -199,6 +146,24 @@ class Login extends MY_Controller
         {
             $this->form_validation->set_message('login_check', 'เข้าสู่ระบบไม่สำเร็จ');
             return FALSE;
+        }
+    }
+
+    function username_check($username)
+    {
+        $member_fiter   =   array(
+            "username"  =>  $username,
+        );
+        $member_check   =   $this->member_model->member_filter($member_fiter);
+
+        if ($member_check->num_rows())
+        {
+            $this->form_validation->set_message('username_check', 'ไม่สามารถใช้ชื่อผู้ใช้นี้ได้');
+            return FALSE;
+        }
+        else
+        {
+            return TRUE;
         }
     }
 
